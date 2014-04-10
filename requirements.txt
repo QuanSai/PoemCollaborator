@@ -1,0 +1,12 @@
+django
+djangorestframework
+
+django-annoying==0.7.9
+django-extensions
+django-utils
+
+#DB
+psycopg2==2.5.2
+south==.0.8.4
+
+ipython==1.1.0
