@@ -10,7 +10,10 @@ class User(TimeStampedModel, AbstractUser):
 
 class Poem(TimeStampedModel):
     owner = models.ForeignKey('User', null=True, related_name="poems")
+    title = models.CharField(max_length=256)
 
+
+    @property
     def collaborators(self):
         return User.objects.filter(poem_lines__in=self.lines.all())
 
